@@ -1,0 +1,15 @@
+# ATTiny85 timer test
+
+## What
+
+a little test to play with the timers on ATTiny85. Checks timer compare flags and toggles arbitrary pins. On github to save it for future reference.
+
+## Why
+
+This is for another project to use an ATTiny to compensate for cheap decoder quirks, mostly getting stuck on an incomplete cycle. The idea is to have incomplete cycles expire so they don't screw with the user input
+
+## results
+
+timer0 (the slow one) has a pulse width of about 204.6 mS. should be useful for long async delays.
+
+timer1 (the fast one) has pulse width of 59 uS, or 8 kHz. should be useful for output pulses.
