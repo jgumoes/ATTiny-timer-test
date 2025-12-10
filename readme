@@ -2,7 +2,7 @@
 
 ## What
 
-a little test to play with the timers on ATTiny85. Checks timer compare flags and toggles arbitrary pins. On github to save it for future reference.
+a little test to play with the timers on ATTiny85. Timer 0 uses an interrupt to create long pulses. Timer 1 checks compare flags for short pulses. Both toggle arbitrary pins but don't have to (neither is tied to an output compare pin). On github to save it for future reference.
 
 ## Why
 
@@ -10,6 +10,6 @@ This is for another project to use an ATTiny to compensate for cheap decoder qui
 
 ## results
 
-timer0 (the slow one) has a pulse width of about 204.6 mS. should be useful for long async delays.
+timer0 (the slow one) has an interval of about 104.6 mS. multiplying with the interrupt should be useful for long async delays.
 
 timer1 (the fast one) has pulse width of 59 uS, or 8 kHz. should be useful for output pulses.
